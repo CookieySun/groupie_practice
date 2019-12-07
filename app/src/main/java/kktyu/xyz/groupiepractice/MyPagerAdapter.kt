@@ -3,6 +3,7 @@ package kktyu.xyz.groupiepractice
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import kktyu.xyz.groupiepractice.groupie.GroupieFragment
 import kktyu.xyz.groupiepractice.rawRecyclerView.RawRecyclerViewFragment
 
 class MyPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(
@@ -12,7 +13,7 @@ class MyPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> RawRecyclerViewFragment()
-            else -> Fragment()
+            else -> GroupieFragment()
         }
     }
 
