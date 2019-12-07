@@ -1,4 +1,4 @@
-package kktyu.xyz.groupiepractice.rawRecyclerView
+package kktyu.xyz.groupiepractice
 
 import androidx.databinding.BaseObservable
 

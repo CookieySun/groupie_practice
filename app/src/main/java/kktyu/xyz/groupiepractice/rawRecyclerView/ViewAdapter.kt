@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 import kktyu.xyz.groupiepractice.BR
+import kktyu.xyz.groupiepractice.ItemViewModel
 import kktyu.xyz.groupiepractice.R
 
 class ViewAdapter(private val list: List<String>) : RecyclerView.Adapter<ItemViewHolder>() {
@@ -13,7 +14,7 @@ class ViewAdapter(private val list: List<String>) : RecyclerView.Adapter<ItemVie
         val viewModel = ItemViewModel()
         val binding = DataBindingUtil.inflate<ViewDataBinding>(
             LayoutInflater.from(parent.context),
-            R.layout.item, parent, false
+            R.layout.recycler_item, parent, false
         )
         binding.setVariable(BR.viewModel, viewModel)
 
