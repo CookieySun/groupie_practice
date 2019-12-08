@@ -9,7 +9,7 @@ import kktyu.xyz.groupiepractice.BR
 import kktyu.xyz.groupiepractice.ItemViewModel
 import kktyu.xyz.groupiepractice.R
 
-class ViewAdapter(private val list: List<String>) : RecyclerView.Adapter<ItemViewHolder>() {
+class ViewAdapter(private val list: List<ItemViewModel>) : RecyclerView.Adapter<ItemViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val viewModel = ItemViewModel()
         val binding = DataBindingUtil.inflate<ViewDataBinding>(
@@ -26,7 +26,7 @@ class ViewAdapter(private val list: List<String>) : RecyclerView.Adapter<ItemVie
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        holder.itemViewModel.item = list[position]
+        holder.itemViewModel.item = list[position].item
     }
 
 }
